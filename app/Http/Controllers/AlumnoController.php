@@ -23,7 +23,7 @@ class AlumnoController extends Controller
 
     public function index() // Listar todos los alumnos
     {
-        $alumnos = Alumno::all();
+        $alumnos=Alumno::all()->get();
         return response()->json($alumnos);
     }
 
